@@ -1,8 +1,13 @@
 import streamlit as st
 import nltk
-nltk.download('punkt')
-from transformers import pipeline
+# This conditional block SOLVES stubborn punkt errors on Streamlit Cloud or Docker
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 from nltk.tokenize import sent_tokenize, word_tokenize
+from transformers import pipeline
+
 
 st.title("AI Study Buddy: Summarize & Simplify")
 
@@ -115,3 +120,4 @@ if st.button("Generate Study Aids"):
             st.markdown(f"Q: {card['question']}")
             with st.expander("Show Answer"):
                 st.write(card['answer'])
+
