@@ -4,7 +4,7 @@ import nltk
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
-    nltk.download('punkt')
+    nltk.download('punkt_tab')
 from nltk.tokenize import sent_tokenize, word_tokenize
 from transformers import pipeline
 
@@ -120,4 +120,5 @@ if st.button("Generate Study Aids"):
             st.markdown(f"Q: {card['question']}")
             with st.expander("Show Answer"):
                 st.write(card['answer'])
+
 
