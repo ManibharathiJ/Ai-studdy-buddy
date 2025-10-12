@@ -2,7 +2,6 @@ import streamlit as st
 import nltk
 from transformers import pipeline
 from nltk.tokenize import sent_tokenize, word_tokenize
-
 nltk.download('punkt')
 
 @st.cache_resource
@@ -116,3 +115,4 @@ if st.button("Generate Study Aids"):
             st.markdown(f"Q: {card['question']}")
             with st.expander("Show Answer"):
                 st.write(card['answer'])
+
