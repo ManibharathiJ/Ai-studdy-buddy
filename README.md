@@ -1,4 +1,4 @@
-# AI Study Buddy 
+# AI Study Buddy
 **https://ai-studdy-buddy-app.streamlit.app/**
 
 ## 📘 Project Overview
