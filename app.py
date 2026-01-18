@@ -122,3 +122,4 @@ if st.button("Generate Study Aids"):
                 st.write(card['answer'])
 
 
+
